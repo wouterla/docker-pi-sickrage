@@ -1,6 +1,5 @@
-FROM alpine:edge
-MAINTAINER Tim Haak <tim@haak.co.uk>
-
+FROM hypriot/rpi-alpine-scratch:latest
+MAINTAINER Wouter Lagerweij <wouter@lagerweij.com>
 
 ENV LANG='en_US.UTF-8' \
     LANGUAGE='en_US.UTF-8' \
