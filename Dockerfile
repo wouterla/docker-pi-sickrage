@@ -9,10 +9,10 @@ RUN apk update && \
     apk -U upgrade && \
     apk -U add \
         ca-certificates \
-        py-pip ca-certificates git python py-libxml2 py-lxml \
+        py-pip ca-certificates git python py-libxml2 libxml2-dev libxslt-dev \
         make gcc g++ python-dev openssl-dev libffi-dev unrar \
         && \
-    pip --no-cache-dir install pyopenssl cheetah requirements && \
+    pip --no-cache-dir install lxml pyopenssl cheetah requirements && \
     git clone --depth 1 https://github.com/SickRage/SickRage.git /sickrage && \
     apk del make gcc g++ python-dev && \
     rm -rf /tmp && \
