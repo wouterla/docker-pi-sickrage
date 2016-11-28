@@ -5,7 +5,8 @@ ENV LANG='en_US.UTF-8' \
     LANGUAGE='en_US.UTF-8' \
     TERM='xterm'
 
-RUN apk -U upgrade && \
+RUN apk update && \
+    apk -U upgrade && \
     apk -U add \
         ca-certificates \
         py-pip ca-certificates git python py-libxml2 py-lxml \
